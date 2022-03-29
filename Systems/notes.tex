@@ -1,0 +1,201 @@
+\documentclass[12pt, a4, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[margin=0.3in]{geometry}
+\usepackage{wrapfig}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pgfplots}
+
+\title{System Anaylsis}
+\author{Anna Pedersen}
+\date{W1 - W4}
+
+\pagestyle{headings}
+
+\begin{document}
+  \maketitle
+
+  \section{Project management steps }
+  \begin{itemize}
+    \item planning
+    \begin{itemize}
+      \item The main purpose is to plan time, cost and resources for the project or problem
+      \item The planning is generally a document that outlines more details about the project, as well as provides a roadmap
+    \end{itemize}
+    \item Scheduling 
+    \begin{itemize}
+      \item Scheduling allows us to plan each step of the project along with the expected time
+      \item We often use Gantt Charts and PERT chart to outline the time taken for each step of the project
+      \item Scheduling allows us to work out the critical path for the project timeline
+    \end{itemize}
+    \item Budgeting
+    \begin{itemize}
+      \item Budgeting helps us to allocate the financial resources of a project
+      \item This includes ensuring the budget can accommodate each step of the project without spending more than the project is worth.
+    \end{itemize}
+    \item Tracking
+    \begin{itemize}
+      \item Tracking allows us to keep up to date with every aspect of the project
+      \item Its important to keep an eye on each phase of the project to ensure its going to plan and there are no problems
+      \item Various tracking and collaboration software is avaliable for groups working on projects, such as BaseCamp
+    \end{itemize}
+  \end{itemize}
+
+  \section{Linear - Cascade/Waterfall}
+  \begin{itemize}
+    \item The waterfall / cascade model is a sequential design process in which progress is seen flowing down through the stages, like a waterfall
+    \item Each phase must be completed before the next phase can begin, hense being easy and simple to understand
+    \item A review is conducted at the end of each phase to make sure the project os being carried out correctly
+    \item \textbf{Advantages}
+    \begin{itemize}
+      \item Very simple and easy to understand
+      \item Phases do not overlap which allows us to prioritise each phase as it happens
+      \item Great for smaller projects where the requirements are well understood
+      \item what is proposed is what is expected
+    \end{itemize}
+    \item \textbf{Disadvantages}
+    \begin{itemize}
+      \item Once in the testing stage, going back is virtually impossible if it was not thought out in the concept stage
+      \item High amounts of risk and uncertainty due to large amount of planning
+      \item Poor model for larger and ongoing projects
+      \item Not suitable for projects that are likely to change
+    \end{itemize}
+  \end{itemize}
+
+  \section{Iterative - RAD}
+  \begin{itemize}
+    \item Rapid application development (RAD) is somtimes used as a general term to describe an alternative to the waterfall method
+    \item It can also be used to describe a methodology created by James Martin
+    \item In this methodolgy less empahasis is put on planning and more on development
+    \item Components (or functions) are developed simultaneously as if they were mini projects
+    \item Each component is given a deadline after which all components are gathered and made in to a working prototype
+    \item The prototype is used to assess the users feedback regarding requirements and expectations from the project.
+    \item \textbf{Advantages}
+    \begin{itemize}
+      \item Significantly reduced development time
+      \item Encourages customer feedback
+      \item Increases re-usability of components in the system
+    \end{itemize}
+    \item \textbf{Disadvantages}
+    \begin{itemize}
+      \item Requires highly skilled designers and developers
+      \item High dependency on modelling skills
+      \item Depends on a strong team to identify requirements
+    \end{itemize}
+    \item \textbf{When would you use RAD?}
+    \begin{itemize}
+      \item When we need to have a system built in a short time frame
+      \item When we have a high avaliability of designers that are able to design the product and ....
+      \item When our budge is high enough to supply numerous deigners and tools needs needed for automated code generation.
+    \end{itemize}
+  \end{itemize}
+
+
+  \section{Stages of the SDLC}
+  \begin{itemize}
+    \item \textbf{What is the SDLC?}
+    \begin{itemize}
+      \item The system development life cycle (SDLC) is a process commonly used for planning, creating, testing and deploying an information system
+      \item It can apply to software, hardware or a combination of both
+      \item The SDLC is defined by a number of clearly grouped activities, known as phases used to develop a finished project or product.
+    \end{itemize}
+    \item \textbf{Why do we use the SDLC}
+    \begin{itemize}
+      \item Gives us a structured, easy to follow approach when developing an information system.
+      \item Phases allow us to break down each step in the development and allows for less errors or discrepancies due to planning.
+    \end{itemize}
+    \item \textbf{Preliminary Analysis}
+    \begin{itemize}
+      \item first we define the problem of the system. Once complete we can allocate resources and prioritize tasks
+      \begin{itemize}
+        \item What is the common goal? What are the equipment costs? How many employees do we have? Do we need more? What are the employees willingness to learn? What is the employee current model?
+      \end{itemize}
+      \item Feasibility report to test if the project can be done
+      \begin{itemize}
+        \item A feasability study is getting your idea and breaking it down into quantifiable terms so you can see if it is worth undertaking or not
+        \item It includes technical feasilbility, if it is operational, if it is economically sustanable and if it fits within the schedule
+        \item Technical, operational, economic, scheduling
+        \begin{itemize}
+          \item TOES
+          \item Economic → How much will it cost? How much needs to be spent? Break down each component, staff salary and you tryto make the most in depth and apprx cost you can at this stage
+          \item Schedule → How much time will it take? How much time do you have as a company? Our competitors coming out with a similar product before us.
+          \item Technical Feasibility → What technology will be used? Does it exist? Do we have it in our organisation? Do we need to develop anything to work in conjunction with this technology?
+          \item Operational feasability → What are the specific skills our staff need to operate this new system? Can our staff operate this new system or does it have new features they are unfamiliar with? Will we need additional training or outsourcing? Will we need to hire more staff?
+        \end{itemize}
+      \end{itemize}
+      \item Analysis
+      \begin{itemize}
+        \item we define the project goals based off the client or end-users needs
+        \item Work out a model for the current system. We create buisness rules based on user needs, ER diagram can start here, normalisation to search out redundancy issues
+        \item We find out the requirements of the new system
+        \item Determine the cause of the problem
+        \begin{itemize}
+          \item create a context diagram to see what interacts with the system
+          \item Create a Data Flow Diagram to pin point where the inforamtion is travelling throughout the system and how this could be more efficient/upgraded
+        \end{itemize}
+        \item Systems Design
+        \begin{itemize}
+          \item Designing a newer and better system after analysing which improvements should be made
+          \item Logical deisgn → This explains what the new system will do
+          \item Physical deisgn → lists the equpiment needed to perform the logical design.
+        \end{itemize}
+      \end{itemize}
+      
+      \item \textbf{Design}
+      \begin{itemize}
+        \item We design both the physical and logical parts of the system
+        \begin{itemize}
+          \item logical → an abstract design usually by modelling, ERD
+          \item physical → technology specific details from which all programming and system construction can be accomplished
+        \end{itemize}
+        \item Creating a design which statisfys the application requirments
+        \item Changing from "what" questions to how questions
+        \item Ensuring all specified functions are added to the system
+        \item Planning of the system documentation
+        \item Design GUI standards
+        \item design system architecture
+        \item design software components
+        \item Construct design prototype
+        \item Finalise testing strategy
+        \item Finalize conversion strategy
+        \item Ensuring design specifications are agreed upon and ready to develop
+        
+      \end{itemize}
+      \item Development
+      - we gather our resources and build and test the system
+          - the resources we obtain are the hardware and software that is needed
+          - the system is created and tested
+      - Design has laid the foundation for system development; the following phases ensure that the product functions as required
+          - Establish standards
+          - Hardware Acquisions
+          - Combinging and intergrating small systems into the larger overall system and testing to ensure everythign is interoperable
+          - Software completed
+          - Ensure design specifications have been converted into a working inofrmation system that addresses all documented system requirements.
+      \item Implementation
+      - we implement the new system into its enviroment.
+          - This can be done in many ways, each with their own advantages and disadvtanges.
+              - Direct cut → the old system is replaced fully by the new system
+              - Pilot → A select group are given access to trial the new system before implemtnting globally
+              - Parallel → both systems are run simultaneously until the new one is considered stable and usable
+              - Phased → Parts of the new system are implemented as seen fit until the new system is fully installed.
+      - System changover is the process of putting the new information system online and retring the old system. The four system changeover approaches description, advantages, disadvantages and the implications of using each of these approaches.
+          - Direct Cutover
+              - Is a direct approach where the old system is cut and over written by the new system. The direct cutover appraoch causes the changeover from the old system to the new system to occur immediatly when the new system becomes operational
+              
+              | pros | Cons |
+              | --- | --- |
+              | Least expensive method  | High risk of data loss  |
+              |  | Cannot revert to the old system as a backup option  |
+              |  | Risk of total system failure  |
+          - Parallel Operation
+              - when 2 things
+          - Pilot operation
+          - Phased operation
+      \item Evaluation and maintenance
+      - We consider the performance of the system to make sure the new system is working and fits the requirements from the pre-analysis and analysis stages
+          - Performance evaluation
+      - We conduct fault finding and make corrections.
+      
+    \end{itemize}
+  \end{itemize}
+\end{document}
