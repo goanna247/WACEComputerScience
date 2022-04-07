@@ -1,4 +1,5 @@
 \documentclass[12pt, a4, twoside]{article}
+\usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage[margin=0.3in]{geometry}
@@ -11,6 +12,8 @@
 \date{W1 - W4}
 
 \pagestyle{headings}
+
+\pgfplotsset{compat=1.18}
 
 \begin{document}
   \maketitle
@@ -140,7 +143,6 @@
           \item Physical deisgn → lists the equpiment needed to perform the logical design.
         \end{itemize}
       \end{itemize}
-      
       \item \textbf{Design}
       \begin{itemize}
         \item We design both the physical and logical parts of the system
@@ -159,43 +161,156 @@
         \item Finalise testing strategy
         \item Finalize conversion strategy
         \item Ensuring design specifications are agreed upon and ready to develop
-        
       \end{itemize}
       \item Development
-      - we gather our resources and build and test the system
-          - the resources we obtain are the hardware and software that is needed
-          - the system is created and tested
-      - Design has laid the foundation for system development; the following phases ensure that the product functions as required
-          - Establish standards
-          - Hardware Acquisions
-          - Combinging and intergrating small systems into the larger overall system and testing to ensure everythign is interoperable
-          - Software completed
-          - Ensure design specifications have been converted into a working inofrmation system that addresses all documented system requirements.
+      \begin{itemize}
+        \item we gather our resources and build and test the system
+        \item the resources we obtain are the hardware and software that is needed
+        \item the system is created and tested
+        \item Design has laid the foundation for system development; the following phases ensure that the product functions as required
+        \begin{itemize}
+          \item Establish standards
+          \item Hardware Acquisions
+          \item Combinging and intergrating small systems into the larger overall system and testing to ensure everythign is interoperable
+          \item Software completed
+          \item Ensure design specifications have been converted into a working inofrmation system that addresses all documented system requirements.
+        \end{itemize}
+      \end{itemize}
       \item Implementation
-      - we implement the new system into its enviroment.
-          - This can be done in many ways, each with their own advantages and disadvtanges.
-              - Direct cut → the old system is replaced fully by the new system
-              - Pilot → A select group are given access to trial the new system before implemtnting globally
-              - Parallel → both systems are run simultaneously until the new one is considered stable and usable
-              - Phased → Parts of the new system are implemented as seen fit until the new system is fully installed.
-      - System changover is the process of putting the new information system online and retring the old system. The four system changeover approaches description, advantages, disadvantages and the implications of using each of these approaches.
-          - Direct Cutover
-              - Is a direct approach where the old system is cut and over written by the new system. The direct cutover appraoch causes the changeover from the old system to the new system to occur immediatly when the new system becomes operational
-              
-              | pros | Cons |
-              | --- | --- |
-              | Least expensive method  | High risk of data loss  |
-              |  | Cannot revert to the old system as a backup option  |
-              |  | Risk of total system failure  |
-          - Parallel Operation
-              - when 2 things
-          - Pilot operation
-          - Phased operation
+      \begin{itemize}
+        \item we implement the new system into its enviroment.
+        \item This can be done in many ways, each with their own advantages and disadvtanges.
+        \item Direct Cutover - Is a direct approach where the old system is cut and over written by the new system. The direct cutover appraoch causes the changeover from the old system to the new system to occur immediatly when the new system becomes operational
+        \item Pilot → A select group are given access to trial the new system before implemtnting globally
+        \item Parallel → both systems are run simultaneously until the new one is considered stable and usable
+        \item Phased → Parts of the new system are implemented as seen fit until the new system is fully installed.
+        \item System changover is the process of putting the new information system online and retring the old system. The four system changeover approaches description, advantages, disadvantages and the implications of using each of these approaches.
+      \end{itemize}
       \item Evaluation and maintenance
-      - We consider the performance of the system to make sure the new system is working and fits the requirements from the pre-analysis and analysis stages
-          - Performance evaluation
-      - We conduct fault finding and make corrections.
-      
+      \begin{itemize}
+        \item We consider the performance of the system to make sure the new system is working and fits the requirements from the pre-analysis and analysis stages
+        \item Performance evaluation
+        \item We conduct fault finding and make corrections.
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+
+  \section{Data Gathering techniques}
+  
+  \href{https://www.bzfar.org/publ/sdlc/stages_of_sdlc/data_collection_methods/47-1-0-56}{\textcolor{Blue}{Resource}}
+  \begin{itemize}
+    \item Observation
+    \begin{itemize}
+      \item When we simply look at the existing system and take notes on how it functions
+    \end{itemize}
+    \item Questionnaire
+    \begin{itemize}
+      \item We can create surveys or questionaries to give to users of the system to get some real time feedback and information regarding the system.
+      \item short survey questions to people who use the system will get lots of responses but wont be in depth.
+    \end{itemize}
+    \item Interview
+    \begin{itemize}
+      \item We can also interview existing users to examine their knowledge of the current system and also to gather feedback on potential changes or upgrades
+      \item Interview people within the system, eg. employees ,to get a detailed sense of the strenghs and weaknesses of the system, however takes a skilled person to do and takes time
+    \end{itemize}
+    \item Sample forms
+    \begin{itemize}
+      \item We can create forms to get information from current users, similar to surveys and questionaries.
+    \end{itemize}
+    \item Sampling volume or work processes by system
+    \item \begin{itemize}
+      \item Also known as studying documentation, we can simply take existing documents and work and write notes based off the information provided.
+    \end{itemize}
+    \item look at documentation
+    \item \begin{itemize}
+      \item read the system documentation and ensure it matches what the current system is doing
+    \end{itemize}
+    \item Work shadowing
+    \begin{itemize}
+      \item shadow a user in the current system to observe their interactions with the system
+    \end{itemize}
+    \begin{center}
+      \begin{tabular}{ |c|c| }
+        \hline
+        {Quantity data collection} & {Qualitative data collection} \\\hline
+        {Questionnaire} & {Interview} \\\hline
+        {Survey} & {observation}  \\ \hline
+      \end{tabular}
+    \end{center}
+  \end{itemize}
+
+  \section{Case Tools}
+  \begin{itemize}
+    \item Computer aided software engineering tools help to design and implement applications in a project.
+    \item They're often used to design the logical rather than the physical aspects of a project or solution
+    \item Gantt and PERT charts are the most often used CASE tools in comp sci.
+  \end{itemize}
+
+  \section{Gantt Charts}
+  \begin{itemize}
+    \item A PERT Chart is also used to schedule, organise and coordinate activites within a prokect
+    \item A PERT chart presents a graphic illustration of a project as a network diagram consisting of numbered nodes (circles) representing events, or milestones in the project linked by labelled vectors (directional lines) representing tasks in the project
+    \item Direction of arrows of the lines indicated the sequence of tasks. These are called dependant or serial tasks.
+    \item Tasks that must be completed in seuqnece but that dont require resources or completition time are considered to have event depenedncy. These are represented by dotted lines with arrows and are called dummy activities.
+    \item May be preferred over Gantt chart because it clearly illustrates task dependencies. On the other hand PERT charts can be much more difficult to interpret, especially on complex projects.
+    \item NEED TO PUT AN ARROW TO SHOW DEPENDINCYS!
+    \item dont put arrows when tasks arent dependant
+    \item A Gantt chart is a type of bar chart that illustrates a project schedule
+    \item Modern day Gantt charts show the dependency between activiteis (eg. an activity that cant start until another has finished.
+    \item Gantt charts provide an easy way to clearly see when a project phase can start based off the completed phases
+    \item A gantt chart can be used for planning and scheduling of the project tasks. For example a gantt chart can be used to assess how long the project should take, determine the resouces needed, and plan the order in which tasks can be completed 
+    \item State the purpose of a Gantt chart 
+    \item To manage and keep track of a project 
+  \end{itemize}
+
+  \section{PERT Charts}
+  \begin{itemize}
+    \item A program evaluation review technique chart is another CASE tool used to help in planning projects.
+    \item Specifically they aid towards scheduling, organising and coordinating tasks within a project
+    \item A pert chart shows the amount of time taken on each phase and in turn the critical, maximum and minimum pathways.
+    \item Duration is drawn in hours/days/weeks in series with decencies
+    \item A critical path is highlighted in red either red circle around project or as a red arrow.
+    \item path the takes the longest time.
+    \item START WITH TASK 0
+    \item Describe how this diagram assists a manager in executing a project 
+    \item The PERT Chart can be used by manages to ensure that the project is accurately scoped. The manager has full view of the project before it is started and can then identify potential bottlenecks. They are best used for an overall view of the project dependencies and are not flexible enough to document small changes as the project evolves. 
+    \item which can be used to schedule, organise and coordinate tasks within a project. It will help the system analyst and their team of programmers, database developers and document writers to visualise the order of tasks, milestones and phrases within a project allowing the effective coordination or work across the project team. 
+  \end{itemize}
+
+  \section{Documentation}
+  \begin{itemize}
+    \item Documentation is essential for any information system and/or product
+    \item same documentation helps developers and designers to understand the ins and outs of the system or project as well as an integral part of planning
+    \item Other documentation is created specifically to help the end user operate the system.
+  \end{itemize}
+
+  \section{Context Diagrams}
+  \begin{itemize}
+    \item A system context diagram, or context diagram (as its
+    \item made up of entity's, data flows and the system
+    \item The system is represented by a circle and has to have the word system in the name, to differentiate it from a process in a DFD
+    \item Entitys are represented by a square/rectangle
+    \item Data flows are curved lines with detail/information because it is representing data not physical objects. eg. Pen details
+    \item context diagrams displays a systems relationships with external entity’s, as such processes and data stores are not shown because they are part of the system.
+    \item Mistakes
+    \begin{itemize}
+      \item Black hole → data only going in, nothing coming out
+      \item Grey hole → different data coming out.
+      \item Miracle → data coming from database from nowhere
+    \end{itemize}
+  \end{itemize}
+
+  \section{Data flow diagram L0 and L1}
+  \begin{itemize}
+    \item processes are represented by circles, their labels are verbs → because they represent the system doing something. They must be numbered eg. 1.0, 2.0 this shows how deep the data flow diagram is.
+    \item Internal data flows are data flows that not go to or from an entity.
+    \item Balanced → data flows match that of the context diagram
+    \item processes expected are 6-7
+    \item Level 1 DFD → to deconstruct a complex system to understand it further
+    \begin{itemize}
+      \item recommended 3 processes in a level 1 DFD
+      \item you don’t need to show the entity, just the data flows
+      \item external data flows must be balanced, inside can have extra data flows, data stores
     \end{itemize}
   \end{itemize}
 \end{document}
